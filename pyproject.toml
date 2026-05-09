@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-niche-optimizer"
+version = "0.1.0"
+description = "QAOA quantum optimization for product niche selection — runs on IBM Quantum or local Aer simulator"
+authors = [{name = "Joshua Almeida", email = "almeidacorporation20@gmail.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["quantum", "qaoa", "qiskit", "optimization", "niche", "ibm-quantum"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "qiskit>=1.0",
+  "qiskit-aer>=0.14",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+ibm = ["qiskit-ibm-runtime>=0.20"]
+
+[project.scripts]
+quantum-optimize = "quantum_optimizer:optimize_strategy"
+
+[project.urls]
+Homepage = "https://github.com/fitzyracing1/quantum-niche-optimizer"
