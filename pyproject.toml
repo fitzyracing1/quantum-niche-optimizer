@@ -30,3 +30,4 @@ quantum-optimize = "quantum_optimizer:optimize_strategy"
 
 [project.urls]
 Homepage = "https://github.com/fitzyracing1/quantum-niche-optimizer"
+Funding = "https://github.com/sponsors/fitzyracing1"
